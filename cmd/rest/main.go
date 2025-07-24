@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/beego/beego/v2/server/web"
+	"github.com/gazprom-el-monitoring/ims/internal/app"
 )
 
 func main() {
-	web.Run()
+	app.Run()
 }
