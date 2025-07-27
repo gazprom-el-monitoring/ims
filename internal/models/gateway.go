@@ -3,13 +3,13 @@ package models
 import (
 	"net/netip"
 
-	"github.com/oklog/ulid"
+	"github.com/google/uuid"
 )
 
 type GatewayProtocol string
 
 type Gateway struct {
-	Id       ulid.ULID
+	Id       uuid.UUID
 	Protocol GatewayProtocol
 	IP       netip.Addr
 	Port     uint16

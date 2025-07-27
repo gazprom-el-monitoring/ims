@@ -1,8 +1,8 @@
 package models
 
-import "github.com/oklog/ulid"
+import "github.com/google/uuid"
 
 type DeviceClass struct {
-	Id       ulid.ULID
-	Bus_name string
+	Id      uuid.UUID
+	BusName string
 }

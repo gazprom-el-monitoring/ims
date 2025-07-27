@@ -1,10 +1,12 @@
 package http
 
-import "github.com/beego/beego/v2/server/web/context"
+import (
+	"github.com/gofiber/fiber/v2"
+)
 
-func (h *Handler) Ping(ctx *context.Context) {
+func (h *Handler) Ping(c *fiber.Ctx) error {
 	k := map[string]interface{}{
 		"ok": true,
 	}
-	ctx.JSONResp(k)
+	return c.JSON(k)
 }

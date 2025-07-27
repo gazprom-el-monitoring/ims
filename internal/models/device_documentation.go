@@ -1,7 +1,7 @@
 package models
 
-import "github.com/oklog/ulid"
+import "github.com/google/uuid"
 
 type DeviceDocumentation struct {
-	Id ulid.ULID
+	Id uuid.UUID
 }

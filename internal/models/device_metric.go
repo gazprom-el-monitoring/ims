@@ -1,6 +1,6 @@
 package models
 
-import "github.com/oklog/ulid"
+import "github.com/google/uuid"
 
 type DeviceMetricType string
 
@@ -18,8 +18,8 @@ const (
 type DeviceMetricClass string
 
 type DeviceMetric struct {
-	Id       ulid.ULID
-	ModelId  ulid.ULID
+	Id       uuid.UUID
+	ModelId  uuid.UUID
 	Scale    float64
 	Type     DeviceMetricType
 	Class    DeviceMetricClass

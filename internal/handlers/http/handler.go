@@ -1,14 +1,20 @@
 package http
 
-import "github.com/beego/beego/v2/server/web"
+import (
+	"github.com/gazprom-el-monitoring/ims/internal/services"
+	"github.com/gofiber/fiber/v2"
+)
 
 type Handler struct {
+	services *services.Services
 }
 
-func NewHandler() *Handler {
-	return &Handler{}
+func NewHandler(services *services.Services) *Handler {
+	return &Handler{
+		services,
+	}
 }
 
-func (h *Handler) Init() {
-	web.Get("/ping", h.Ping)
+func (h *Handler) Init(app *fiber.App) {
+	app.Get("/ping", h.Ping)
 }

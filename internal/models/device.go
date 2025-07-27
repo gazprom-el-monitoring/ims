@@ -1,14 +1,16 @@
 package models
 
-import "github.com/oklog/ulid"
+import (
+	"github.com/google/uuid"
+)
 
 type DeviceProtocol string
 
 type Device struct {
-	Id        ulid.ULID
-	ModelId   ulid.ULID
+	Id        uuid.UUID
+	ModelId   uuid.UUID
 	Location  string
 	Protocol  *DeviceProtocol
-	GatewayId *ulid.ULID
+	GatewayId *uuid.UUID
 	Address   *string
 }
